@@ -9,7 +9,10 @@ class LandingPage extends StatelessWidget {
   }
 
   void _onRegisterPressed(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => RegistrationScreen()));
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => RegistrationScreen()),
+    );
   }
 
   @override

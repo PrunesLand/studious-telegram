@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:university_chatbot/features/dashboard/presentation/screen/home_screen.dart';
+import 'package:university_chatbot/features/chatbot/presentation/index.dart';
 import 'package:university_chatbot/features/onboarding/index.dart';
+import 'features/dashboard/presentation/screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/registration': (context) => RegistrationScreen(),
         '/home': (context) => HomeScreen(),
+        '/chatbot': (context) => ChatbotScreen(),
       },
     );
   }

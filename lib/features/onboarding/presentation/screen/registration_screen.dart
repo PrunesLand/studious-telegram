@@ -24,9 +24,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   void _register() {
     if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('User registered')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('User registered')));
       Navigator.push(context, MaterialPageRoute(builder: (_) => LoginScreen()));
     }
   }
@@ -73,7 +73,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const SizedBox(height: 16),
               TextFormField(
                 controller: _confirmPasswordController,
-                decoration: const InputDecoration(labelText: 'Confirm Password'),
+                decoration: const InputDecoration(
+                  labelText: 'Confirm Password',
+                ),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {

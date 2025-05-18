@@ -22,9 +22,9 @@ class LoginScreenState extends State<LoginScreen> {
 
   void _login() {
     if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Logged in')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('Logged in')));
       Navigator.push(context, MaterialPageRoute(builder: (_) => HomeScreen()));
     }
   }
@@ -66,10 +66,7 @@ class LoginScreenState extends State<LoginScreen> {
                 },
               ),
               const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: _login,
-                child: const Text('Login'),
-              ),
+              ElevatedButton(onPressed: _login, child: const Text('Login')),
             ],
           ),
         ),
