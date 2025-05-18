@@ -18,7 +18,6 @@ class LandingPage extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            // Centered Hero Title
             Center(
               child: Text(
                 'Learn Droid',
@@ -30,14 +29,12 @@ class LandingPage extends StatelessWidget {
               ),
             ),
 
-            // Buttons at the bottom
             Positioned(
               bottom: 32,
               left: 16,
               right: 16,
               child: Row(
                 children: [
-                  // Login Button
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () => _onLoginPressed(context),
@@ -54,7 +51,6 @@ class LandingPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 16),
-                  // Register Button
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () => _onRegisterPressed(context),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:university_chatbot/features/dashboard/presentation/screen/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,8 +23,9 @@ class LoginScreenState extends State<LoginScreen> {
   void _login() {
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Logging in...')),
+        const SnackBar(content: Text('Logged in')),
       );
+      Navigator.push(context, MaterialPageRoute(builder: (_) => HomeScreen()));
     }
   }
 

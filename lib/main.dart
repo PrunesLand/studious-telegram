@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:university_chatbot/features/dashboard/presentation/screen/home_screen.dart';
 import 'package:university_chatbot/features/onboarding/index.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demon',
+      title: 'Droid Learner',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => LoginScreen(),
         '/registration': (context) => RegistrationScreen(),
+        '/home': (context) => HomeScreen(),
       },
     );
   }

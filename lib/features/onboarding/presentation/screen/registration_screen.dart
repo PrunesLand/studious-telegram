@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:university_chatbot/features/onboarding/index.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -24,8 +25,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   void _register() {
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Registering...')),
+        const SnackBar(content: Text('User registered')),
       );
+      Navigator.push(context, MaterialPageRoute(builder: (_) => LoginScreen()));
     }
   }
 
