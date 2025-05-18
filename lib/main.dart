@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:university_chatbot/features/chatbot/presentation/index.dart';
 import 'package:university_chatbot/features/onboarding/index.dart';
+
+import 'core/utils/NavigationObserver.dart';
 import 'features/dashboard/presentation/screen/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final MyNavigatorObserver myObserver = MyNavigatorObserver();
+
+  MyApp({super.key}); // Non-const constructor
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // navigatorObservers: [
+      //   myObserver,
+      // ], // Use the correct observer instance here
       title: 'Droid Learner',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
