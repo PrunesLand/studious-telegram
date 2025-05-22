@@ -17,9 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // navigatorObservers: [
-      //   myObserver,
-      // ], // Use the correct observer instance here
       title: 'Droid Learner',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
